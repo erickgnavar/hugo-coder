@@ -131,6 +131,10 @@
       {{- partial "analytics/plausible" . -}}
     {{ end }}
 
+    {{ if and .Site.Params.buyMeACoffee .Site.Params.buyMeACoffee.username }}
+      {{- partial "donations/buy-me-a-coffee" . -}}
+    {{ end }}
+
   </body>
 
 </html>
