@@ -76,6 +76,10 @@
   {{- partial "analytics/plausible" . -}}
   {{ end }}
 
+  {{ if and .Site.Params.buyMeACoffee .Site.Params.buyMeACoffee.username }}
+  {{- partial "donations/buy-me-a-coffee" . -}}
+  {{ end }}
+
   {{ if and .Site.Params.goatCounter .Site.Params.goatCounter.code }}
   {{- partial "analytics/goatcounter" . -}}
   {{ end }}
